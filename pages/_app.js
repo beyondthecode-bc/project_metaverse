@@ -1,18 +1,25 @@
 import Head from 'next/head';
+import Meta from '../components/Meta';
 
 import '../styles/globals.css';
 
-const MyApp = ({ Component, pageProps }) => (
-  <>
-    <Head>
-      <title>Metaversus</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="preconnect" href="https://stijndv.com" />
-      <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
-    </Head>
-    <Component {...pageProps} />
-  </>
-);
+import web3Onboard from '../connector/web3-onboard'
+import { Web3OnboardProvider } from '@web3-onboard/react'
+
+
+
+const MyApp = ({ Component, pageProps }) => {
+
+
+
+  return (
+    <>
+      <Web3OnboardProvider web3Onboard={web3Onboard}>
+        <Meta title="MININGFARM.club" />
+        <Component {...pageProps} />
+      </Web3OnboardProvider>
+    </>
+  )
+};
 
 export default MyApp;

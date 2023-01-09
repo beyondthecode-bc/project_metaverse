@@ -27,9 +27,10 @@ export const exploreWorlds = [
 ];
 
 export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world by reading basmalah to be safe',
-  'No need to beat around the bush, just stay on the gas and have fun',
+  'Buy ⛏️Miners using BNB (BEP20)',
+  'The hired Miners will start looking for BNB Rewards',
+  'Buying more Miners? Use Compount Miners Button to compund them',
+  'Click on "Collect BNB Rewards" to withdraw your BNB',
 ];
 
 export const newFeatures = [
