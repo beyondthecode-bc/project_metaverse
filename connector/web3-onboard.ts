@@ -1,15 +1,13 @@
-import fortmaticModule from '@web3-onboard/fortmatic'
+import { useEffect, useState } from 'react'
 import gnosisModule from '@web3-onboard/gnosis'
 import injectedModule from '@web3-onboard/injected-wallets'
 import keepkeyModule from '@web3-onboard/keepkey'
 import keystoneModule from '@web3-onboard/keystone'
 import ledgerModule from '@web3-onboard/ledger'
-import portisModule from '@web3-onboard/portis'
 import torusModule from '@web3-onboard/torus'
 import trezorModule from '@web3-onboard/trezor'
 import walletConnectModule from '@web3-onboard/walletconnect'
 import coinbaseModule from '@web3-onboard/coinbase'
-import magicModule from '@web3-onboard/magic'
 import dcentModule from '@web3-onboard/dcent'
 import mewModule from '@web3-onboard/mew-wallet'
 import sequenceModule from '@web3-onboard/sequence'
@@ -52,7 +50,7 @@ const trezorOptions = {
 }
 const trezor = trezorModule(trezorOptions)
 
-export default init({
+export const initWeb3Onboard = init({
     // An array of wallet modules that you would like to be presented to the user to select from when connecting a wallet.
     wallets: [
         injected,
@@ -84,13 +82,13 @@ export default init({
             rpcUrl: `https://mainnet.infura.io/v3/${INFURA_KEY}`
         },
         {
-            id: '0x56',
+            id: '0x38',
             token: 'BNB',
             label: 'Binance Smart Chain',
-            rpcUrl: `https://bsc-mainnet.nodereal.io/v1/673e87390f0b4b5c9896b8bd769fd342`
+            rpcUrl: `https://bsc-dataseed.binance.org/`
         },
         {
-            id: '0x97',
+            id: '0x61',
             token: 'BNB',
             label: 'TestNet - Binance Smart Chain',
             rpcUrl: `https://data-seed-prebsc-1-s1.binance.org:8545/`
@@ -105,8 +103,7 @@ export default init({
         logo: '<svg></svg>',
         // The description of your app
         description: 'Login',
-        // The url to a getting started guide for app
-        gettingStartedGuide: 'http://mydapp.io/getting-started',
+
         // url that points to more information about app
         explore: 'http://mydapp.io/about',
         // if your app only supports injected wallets and when no injected wallets detected, recommend the user to install some
@@ -125,15 +122,13 @@ export default init({
             termsUrl: 'https://www.blocknative.com/terms-conditions',
             privacyUrl: 'https://www.blocknative.com/privacy-policy'
         }
+    },
+    accountCenter: {
+        desktop: {
+            enabled: false
+        },
+        mobile: {
+            enabled: false
+        }
     }
-    // example customising copy
-    // i18n: {
-    //   en: {
-    //     connect: {
-    //       selectingWallet: {
-    //         header: 'custom text header'
-    //       }
-    //     }
-    //   }
-    // }
 })
