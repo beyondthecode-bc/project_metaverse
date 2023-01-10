@@ -85,7 +85,7 @@ const MiningCard = () => {
                 <span className='sm:text-[18px] text-[14px] sm:leading-[40.32px] leading-[36.32px] font-bold text-white mt-4'>ENTER BNB AMOUNT & CLICK HIRE BELOW</span>
                 <div>
                     <button
-                        type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px] w-full">
+                        type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#25618B]  rounded-lg  gap-[12px] w-full">
                         <GiMiner color='white' size={26} />
                         <span className="font-normal text-[19px] text-white font-bold	">
                             Buy Miners
@@ -94,19 +94,34 @@ const MiningCard = () => {
                 </div>
                 <div className='flex flex-col sm:flex-row mt-4 gap-4'>
                     <button
-                        type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#A9D0F5] rounded-[32px] gap-[12px] w-full">
+                        type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
                         <GiMiner color='#333333' size={26} />
                         <span className="text-[19px] font-bold text-[#A9D0F5]" style={{ color: '#333333' }}>
                             Compound Miners
                         </span>
                     </button>
                     <button
-                        type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#A9D0F5] rounded-[32px] gap-[12px] w-full">
+                        type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
                         <GiMiner color='white' size={26} style={{ color: '#333333' }} />
                         <span className=" text-[19px]  font-bold	" style={{ color: '#333333' }}>
                             Collect Rewards
                         </span>
                     </button>
+                </div>
+
+                <div className='bg-neutral-900/70 rounded-lg p-10 mt-4'>
+                    <div className="flex items-center justify-between flex-wrap">
+                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>DAILY PROFIT:</span>
+                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>8%</span>
+                    </div>
+                    <div className="flex items-center justify-between flex-wrap">
+                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>APY:</span>
+                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>2920%</span>
+                    </div>
+                    <div className="flex items-center justify-between flex-wrap">
+                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>TAX:</span>
+                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>4%</span>
+                    </div>
                 </div>
 
             </div>

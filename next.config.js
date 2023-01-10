@@ -3,11 +3,9 @@ const SECONDS_PER_DAY = 86400;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   experimental: {
     appDir: false,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   images: {
     domains: ['127.0.0.1', 'cdn.sanity.io'],

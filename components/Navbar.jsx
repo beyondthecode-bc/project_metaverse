@@ -104,7 +104,7 @@ const Navbar = () => {
             alt="wallet"
             className="w-[24px] h-[24px] object-contain"
           />
-          <span className="font-normal text-[16px] text-white font-bold	">
+          <span className="font-normal text-[16px] text-white  ">
             {connecting ? 'Connecting' : wallet ? account.address.substring(0, 4) + '...' + account.address.substring(38, 42) : 'Connect'}
           </span>
         </button>
