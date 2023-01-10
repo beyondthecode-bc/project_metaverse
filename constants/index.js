@@ -27,7 +27,7 @@ export const exploreWorlds = [
 ];
 
 export const startingFeatures = [
-  'Buy ⛏️Miners using BNB (BEP20)',
+  'Buy Miners using BNB (BEP20)',
   'The hired Miners will start looking for BNB Rewards',
   'Buying more Miners? Use Compount Miners Button to compund them',
   'Click on "Collect BNB Rewards" to withdraw your BNB',
