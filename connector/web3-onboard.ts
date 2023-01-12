@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import gnosisModule from '@web3-onboard/gnosis'
+ import gnosisModule from '@web3-onboard/gnosis'
 import injectedModule from '@web3-onboard/injected-wallets'
 import keepkeyModule from '@web3-onboard/keepkey'
 import keystoneModule from '@web3-onboard/keystone'
@@ -16,19 +15,7 @@ import tallyHoWalletModule from '@web3-onboard/tallyho'
 import { init } from '@web3-onboard/react'
 
 // Example key • Replace with your infura key
-const INFURA_KEY = '2b167082531c4cf5a07c605e8819aa90'
-
-const injected = injectedModule({
-    custom: [
-        // include custom injected wallet modules here
-    ],
-    filter: {
-        // mapping of wallet labels to filter here
-    }
-})
-
 const walletLink = coinbaseModule()
-
 const walletConnect = walletConnectModule()
 const torus = torusModule()
 const ledger = ledgerModule()
@@ -50,10 +37,10 @@ const trezorOptions = {
 }
 const trezor = trezorModule(trezorOptions)
 
-export const initWeb3Onboard = init({
+export default init({
     // An array of wallet modules that you would like to be presented to the user to select from when connecting a wallet.
     wallets: [
-        injected,
+        injectedModule(),
         gnosis,
         walletLink,
         torus,
@@ -79,7 +66,7 @@ export const initWeb3Onboard = init({
             // used for display, eg Ethereum Mainnet
             label: 'Ethereum Mainnet',
             // used for network requests
-            rpcUrl: `https://mainnet.infura.io/v3/${INFURA_KEY}`
+            rpcUrl: `https://mainnet.infura.io/v3/2b167082531c4cf5a07c605e8819aa90`
         },
         {
             id: '0x38',

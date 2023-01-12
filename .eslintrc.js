@@ -3,6 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  settings: {
+    "import/resolver": {
+      typescript: {} // this loads <rootdir>/tsconfig.json to eslint
+    },
+  },
   extends: [
     'plugin:react/recommended',
     'airbnb',
@@ -31,8 +36,27 @@ module.exports = {
     'import/extensions': 0,
     'react/prop-types': 0,
     'linebreak-style': 0,
+    "curly": 0,
+    "react/jsx-indent": "off",
+    "no-multiple-empty-lines": 0,
+    "react/jsx-indent-props": "off",
+    "arrow-parens": 0,
+    "indent": "off",
+    "eact/jsx-wrap-multilines": 0,
+    "react/jsx-closing-bracket-location": 0,
+    "nonblock-statement-body-position": 0,
+    "no-inner-declarations": 0,
+    "no-tabs": "off",
+    "prefer-template": 0,
+    "react/self-closing-comp": "off",
+    "quotes": "off",
+    "semi": "off",
+    "react/jsx-wrap-multilines": 0,
+    "comma-dangle": "off",
+    "arrow-body-style": "off",
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
+    "no-unused-vars": 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
@@ -46,13 +70,6 @@ module.exports = {
     'max-len': [
       2,
       1050,
-    ],
-    'no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-        maxEOF: 1,
-      },
     ],
     'no-underscore-dangle': [
       'error',
@@ -96,4 +113,5 @@ module.exports = {
       },
     ],
   },
+
 };

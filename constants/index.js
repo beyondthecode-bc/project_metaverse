@@ -35,16 +35,17 @@ export const startingFeatures = [
 
 export const newFeatures = [
   {
-    imgUrl: '/vrpano.svg',
-    title: 'A new world',
+    imgUrl: '/zzz.svg',
+    title: 'Passive Income',
     subtitle:
-      'we have the latest update with new world for you to try never mind',
+      'Acquiring a larger number of mining units at an earlier date, and at a more frequent rate than your competitors, will yield a higher rate of return.',
   },
   {
-    imgUrl: '/headset.svg',
-    title: 'More realistic',
+    imgUrl: '/advantage-icon.svg',
+    title: 'Big Advantage',
     subtitle:
-      'In the latest update, your eyes are narrow, making the world more realistic than ever',
+      'You don`t need to worry about a price chart as we are not bound to any. Compounding your rewards or buying more miners will give you a higher rate of return.',
+
   },
 ];
 

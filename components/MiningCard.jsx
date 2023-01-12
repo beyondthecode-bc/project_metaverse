@@ -1,17 +1,19 @@
 
 'use client';
 
-import { motion } from 'framer-motion';
-import styles from '../styles';
-import { staggerContainer, fadeIn, planetVariants } from '../utils/motion';
-import { GiMining, GiTwoCoins, GiMiner } from 'react-icons/gi'
+import { motion } from "framer-motion";
+import { GiMining, GiTwoCoins, GiMiner } from "react-icons/gi";
+import { BiGitMerge } from 'react-icons/bi'
+import { FaHandHoldingUsd } from 'react-icons/fa'
+import { planetVariants } from "../utils/motion";
+
 const MiningCard = () => {
     return (
         <motion.div
-            variants={planetVariants('left')}
+            variants={planetVariants("left")}
             className="flex-[1] lg:max-w-[700px] flex justify-start flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] mr-5 relative"
         >
-            <div className='bg-neutral-900/30 rounded-lg p-10'>
+            <div className="bg-neutral-900/30 rounded-lg p-10">
                 <div className="relative flex items-center">
                     <div className="flex-grow border-t border-gray-400"></div>
                     <span className="flex-shrink mx-4 sm:text-[30px] text-[24px] text-gray-400">Statistics</span>
@@ -52,17 +54,17 @@ const MiningCard = () => {
                     </p>
                 </div>
                 <div className="relative flex py-5 items-center mt-4">
-                    <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>MIN: 0.01 BNB</span>
+                    <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold">MIN: 0.01 BNB</span>
                     <div className="flex-grow border-t border-gray-400"></div>
-                    <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white ml-4 font-bold'>MAX: 200 BNB</span>
+                    <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white ml-4 font-bold">MAX: 200 BNB</span>
 
                 </div>
 
                 <div className="invest-input-holder flex items-center justify-between flex-wrap">
                     <div>
-                        <input type="number" className="invest-input" step="0.01" min="0.01" placeholder='0.01' required />
+                        <input type="number" className="invest-input" step="0.01" min="0.01" placeholder="0.01" required />
                     </div>
-                    {/*                  <div className='flex items-center justify-end flex-wrap'>
+                    {/*                  <div className="flex items-center justify-end flex-wrap">
                         <span>
                             <svg width="25" height="25" className=" icon-minus icon-control" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g opacity="0.3">
@@ -82,51 +84,48 @@ const MiningCard = () => {
 
                     </div> */}
                 </div>
-                <span className='sm:text-[18px] text-[14px] sm:leading-[40.32px] leading-[36.32px] font-bold text-white mt-4'>ENTER BNB AMOUNT & CLICK HIRE BELOW</span>
+                <span className="sm:text-[18px] text-[14px] sm:leading-[40.32px] leading-[36.32px] font-bold text-white mt-4">ENTER BNB AMOUNT & CLICK BUY MINERS BELOW</span>
                 <div>
-                    <button
-                        type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#25618B]  rounded-lg  gap-[12px] w-full">
-                        <GiMiner color='white' size={26} />
+                    <button type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#25618B] rounded-lg gap-[12px] w-full">
+                        <GiMiner color="white" size={26} />
                         <span className="font-normal text-[19px] text-white font-bold	">
                             Buy Miners
                         </span>
                     </button>
                 </div>
-                <div className='flex flex-col sm:flex-row mt-4 gap-4'>
-                    <button
-                        type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
-                        <GiMiner color='#333333' size={26} />
-                        <span className="text-[19px] font-bold text-[#A9D0F5]" style={{ color: '#333333' }}>
+                <div className="flex flex-col sm:flex-row mt-4 gap-4">
+                    <button type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
+                        <BiGitMerge color="#333333" size={26} />
+                        <span className="text-[19px] font-bold text-[#A9D0F5]" style={{ color: "#333333" }}>
                             Compound Miners
                         </span>
                     </button>
-                    <button
-                        type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
-                        <GiMiner color='white' size={26} style={{ color: '#333333' }} />
-                        <span className=" text-[19px]  font-bold	" style={{ color: '#333333' }}>
+                    <button type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
+                        <FaHandHoldingUsd color="white" size={26} style={{ color: "#333333" }} />
+                        <span className=" text-[19px]  font-bold	" style={{ color: "#333333" }}>
                             Collect Rewards
                         </span>
                     </button>
                 </div>
 
-                <div className='bg-neutral-900/70 rounded-lg p-10 mt-4'>
+                <div className="bg-neutral-900/70 rounded-lg p-10 mt-4">
                     <div className="flex items-center justify-between flex-wrap">
-                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>DAILY PROFIT:</span>
-                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>8%</span>
+                        <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold">DAILY PROFIT:</span>
+                        <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold">8%</span>
                     </div>
                     <div className="flex items-center justify-between flex-wrap">
-                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>APY:</span>
-                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>2920%</span>
+                        <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold">APY:</span>
+                        <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold">2920%</span>
                     </div>
                     <div className="flex items-center justify-between flex-wrap">
-                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>TAX:</span>
-                        <span className='sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold'>4%</span>
+                        <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold">TAX:</span>
+                        <span className="sm:text-[22px] text-[16px] sm:leading-[40.32px] leading-[36.32px] text-white mr-4 font-bold">4%</span>
                     </div>
                 </div>
 
             </div>
         </motion.div>
-    )
+    );
 };
 
 export default MiningCard;

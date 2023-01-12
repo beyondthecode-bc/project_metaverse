@@ -7,6 +7,9 @@ const nextConfig = {
   experimental: {
     appDir: false,
   },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
   images: {
     domains: ['127.0.0.1', 'cdn.sanity.io'],
   },

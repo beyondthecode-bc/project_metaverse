@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react'
 
 import { motion } from 'framer-motion';
@@ -30,12 +31,12 @@ const Navbar = () => {
       )
       async function setMagicUser() {
         try {
-          const { email } =
-            await magicWalletProvider.instance.user.getMetadata()
+          const { email } = await magicWalletProvider.instance.user.getMetadata()
           const magicUserEmail = localStorage.getItem('magicUserEmail')
           if (!magicUserEmail || magicUserEmail !== email)
             localStorage.setItem('magicUserEmail', email)
         } catch (err) {
+          console.log(err)
           throw err
         }
       }
@@ -88,23 +89,28 @@ const Navbar = () => {
       whileInView="show"
       className={`${styles.xPaddings} py-8 relative`}
     >
-      <div className="absolute w-[50%] inset-0 gradient-01" />
+      <div className="absolute w-[50%] inset-0" />
       <div
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
       >
-        <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
+        {/* <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
           MININGFARM
-        </h2>
+        </h2> */}
+         <img
+            src="/logo.png"
+            alt="wallet"
+            className="w-[200px] sm:w-[400px] object-contain"
+          />
 
 
         <button onClick={() => (wallet ? disconnect(wallet) : connect())}
-          type="button" className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
+          type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
           <img
             src="/wallet.svg"
             alt="wallet"
             className="w-[24px] h-[24px] object-contain"
           />
-          <span className="font-normal text-[16px] text-white  ">
+          <span className="text-[14px] sm:text-[19px] text-white font-bungee p-1 mt-1">
             {connecting ? 'Connecting' : wallet ? account.address.substring(0, 4) + '...' + account.address.substring(38, 42) : 'Connect'}
           </span>
         </button>

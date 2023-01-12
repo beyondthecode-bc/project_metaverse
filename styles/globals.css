@@ -1,12 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+@font-face {
+  font-family: 'Bungee';
+  src: url('Bungee-Regular.ttf');
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Eudoxus Sans", sans-serif;
+  font-family: 'Bungee', Arial, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -24,9 +29,10 @@
 
 .hero-gradient {
   background: linear-gradient(97.86deg,
-      #1fb80b 0%,
-      #c79834 53.65%,
-      #c73434 100%);
+      #f5bc37 0%,
+      #6f4f07 33%,
+      #71361a 60.65%,
+      #4d3703 100%);
 }
 
 .gradient-02 {
@@ -135,4 +141,23 @@
 
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.rock-button {
+  /* Apply the rock texture as the background image */
+  
+  background-image: url('/rock1.png');
+  /* Style the button as desired */
+  border: none;
+  padding: 10px 20px;
+  font-size: 22px;
+  color: white;
+}
+
+/* Define the hover styles */
+.rock-button:hover {
+  /* Zoom out the button by reducing the scale */
+  transform: scale(1.04);
+  /* Add a transition to smoothly animate the zoom effect */
+  transition: transform 0.2s ease-in-out;
 }
