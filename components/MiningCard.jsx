@@ -9,8 +9,6 @@ import { planetVariants } from "../utils/motion";
 
 
 const MiningCard = () => {
-
-
     return (
         <motion.div
             variants={planetVariants("left")}

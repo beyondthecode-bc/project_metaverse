@@ -2,7 +2,6 @@ import { Footer, Navbar } from '../components';
 import { About, Explore, Feedback, GetStarted, Hero, Insights, WhyUs, World } from '../sections';
 
 const Home = () => {
-
   return (
     <div className="overflow-hidden" style={{ backgroundColor: "#171717" }}>
       <Navbar />
@@ -23,7 +22,8 @@ const Home = () => {
         <Feedback />
       </div>
       <Footer />
-    </div>)
+    </div>
+    )
 };
 
 export default Home;

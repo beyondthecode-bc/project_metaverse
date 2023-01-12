@@ -9,7 +9,6 @@ import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
 const Navbar = () => {
-
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
@@ -107,7 +106,7 @@ const Navbar = () => {
           className="w-[200px] sm:w-[400px] object-contain"
 
         />
-        
+
         {isMobile
           ?
           <button onClick={() => (wallet ? disconnect(wallet) : connect())}
@@ -133,9 +132,7 @@ const Navbar = () => {
             <span className="text-[14px] sm:text-[19px] text-white font-bungee p-1 mt-1">
               {connecting ? 'Connecting' : wallet ? account.address.substring(0, 4) + '...' + account.address.substring(38, 42) : 'Connect'}
             </span>
-          </button>
-        }
-
+          </button>}
       </div>
     </motion.nav>)
 };

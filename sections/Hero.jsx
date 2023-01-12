@@ -62,6 +62,7 @@ const Hero = ({ scrollToRef }) => {
                 url='videos/trailer.mp4'
                 width='100%'
                 height='100%'
+                loop
                 controls={true} />
 
               {/* <Image
