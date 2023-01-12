@@ -6,7 +6,12 @@ const Meta = ({ title, keyword, desc }) => {
         <div>
             <Head>
                 <title>{title}</title>
-                <link rel="icon" href="/favicon.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/site.webmanifest" />
+                <meta name="msapplication-TileColor" content="#ffc40d" />
+                <meta name="theme-color" content="#ffffff" />
                 <meta name="description" content={desc} />
                 <meta name="keyword" content={keyword} />
             </Head>
@@ -15,10 +20,9 @@ const Meta = ({ title, keyword, desc }) => {
 };
 
 Meta.defaultProps = {
-    title: "MININGFARM | Earn passive income",
     keyword:
-        "bitcoin, blockchain, crypto, crypto collectibles, crypto makretplace, cryptocurrency, digital items, market, nft, nft marketplace, nft next js, NFT react, non-fungible tokens, virtual asset, wallet",
-    desc: "Start earning passive income by buying Miners to dig for BNB on BNB Smart Chain.",
+        "bitcoin, blockchain, crypto, crypto collectibles, crypto makretplace, cryptocurrency, digital items, market, nft, nft marketplace, nft next js, NFT react, non-fungible tokens, virtual asset, wallet,binance, bnb,bnb mine,mining bnb, crypto mine",
+    desc: "Start earning passive income by buying Miners that reward you with BNB on BNB Smart Chain.",
 };
 
 export default Meta;

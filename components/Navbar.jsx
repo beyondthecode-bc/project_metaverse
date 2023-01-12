@@ -1,15 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react'
-
 import { motion } from 'framer-motion';
 import { useConnectWallet, useWallets } from '@web3-onboard/react'
 import { ethers } from 'ethers'
-
+import { useMediaQuery } from 'react-responsive'
 import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
 const Navbar = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
   const connectedWallets = useWallets()
 
@@ -81,6 +83,9 @@ const Navbar = () => {
     }
   }, [wallet])
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <motion.nav
@@ -96,24 +101,41 @@ const Navbar = () => {
         {/* <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
           MININGFARM
         </h2> */}
-         <img
-            src="/logo.png"
-            alt="wallet"
-            className="w-[200px] sm:w-[400px] object-contain"
-          />
+        <img
+          src="/logo.png"
+          alt="wallet"
+          className="w-[200px] sm:w-[400px] object-contain"
 
+        />
+        
+        {isMobile
+          ?
+          <button onClick={() => (wallet ? disconnect(wallet) : connect())}
+            type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px] mt-2">
+            <img
+              src="/wallet.svg"
+              alt="wallet"
+              className="w-[14px] h-[14px] object-contain"
+            />
+            <span className="text-[10px] sm:text-[14px] text-white font-bungee mt-1">
+              {connecting ? 'Connecting' : wallet ? account.address.substring(0, 4) + '...' + account.address.substring(38, 42) : 'Connect'}
+            </span>
+          </button>
+          :
 
-        <button onClick={() => (wallet ? disconnect(wallet) : connect())}
-          type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
-          <img
-            src="/wallet.svg"
-            alt="wallet"
-            className="w-[24px] h-[24px] object-contain"
-          />
-          <span className="text-[14px] sm:text-[19px] text-white font-bungee p-1 mt-1">
-            {connecting ? 'Connecting' : wallet ? account.address.substring(0, 4) + '...' + account.address.substring(38, 42) : 'Connect'}
-          </span>
-        </button>
+          <button onClick={() => (wallet ? disconnect(wallet) : connect())}
+            type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px] mt-7">
+            <img
+              src="/wallet.svg"
+              alt="wallet"
+              className="w-[24px] h-[24px] object-contain"
+            />
+            <span className="text-[14px] sm:text-[19px] text-white font-bungee p-1 mt-1">
+              {connecting ? 'Connecting' : wallet ? account.address.substring(0, 4) + '...' + account.address.substring(38, 42) : 'Connect'}
+            </span>
+          </button>
+        }
+
       </div>
     </motion.nav>)
 };

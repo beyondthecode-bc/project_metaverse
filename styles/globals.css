@@ -161,3 +161,33 @@ input[type=number]::-webkit-inner-spin-button {
   /* Add a transition to smoothly animate the zoom effect */
   transition: transform 0.2s ease-in-out;
 }
+
+:root {
+  --background-color: #171717; 
+  --text-color: #9e9e9e; 
+  --text-color-button: #d4d4d4; 
+  --border-color: #525252; 
+  --accent-background: #212121; 
+  --accent-color: #dbc900; 
+  --accent-color-hover: #d4af37; 
+  --secondary-text-color: #000000; 
+  /* --onboard-connect-content-width: 50vw;
+  --onboard-connect-content-height: 30vw; 
+  --onboard-wallet-columns: 3;*/
+  --onboard-connect-sidebar-background: var(--accent-background);
+  --onboard-close-button-background: var(--accent-background);
+  --onboard-connect-sidebar-color: var(--text-color);
+  --onboard-connect-sidebar-progress-background: var(--secondary-text-color);
+  --onboard-connect-sidebar-progress-color: var(--accent-color);
+  --onboard-connect-header-background: var(--background-color);
+  --onboard-connect-header-color: var(--text-color);
+  --onboard-main-scroll-container-background: var(--background-color);
+  --onboard-link-color: var(--accent-color);
+  --onboard-wallet-button-background: var(--background-color);
+  --onboard-wallet-button-background-hover: var(--accent-color-hover);
+  --onboard-wallet-button-border-color: var(--border-color);
+  --onboard-wallet-button-color: var(--text-color-button);
+  --onboard-wallet-button-color-hover: var(#000);
+  --onboard-wallet-app-icon-border-color: var(--border-color);
+  --onboard-modal-background: var(--background-color);
+}
