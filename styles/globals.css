@@ -191,3 +191,20 @@ input[type=number]::-webkit-inner-spin-button {
   --onboard-wallet-app-icon-border-color: var(--border-color);
   --onboard-modal-background: var(--background-color);
 }
+
+.moving-text {
+  position: relative;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

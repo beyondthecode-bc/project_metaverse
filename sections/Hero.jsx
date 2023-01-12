@@ -7,10 +7,12 @@ import { slideIn, staggerContainer } from '../utils/motion';
 import { useMediaQuery } from 'react-responsive'
 import { GiMining } from "react-icons/gi";
 import { Link } from 'react-scroll'
+import ReactPlayer from 'react-player'
 
 const Hero = ({ scrollToRef }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
+  console.log(isMobile)
 
   return (
     <section className={`${styles.yPaddings} sm:pl-16 pl-5 sm:pr-16 pr-5`}>
@@ -27,12 +29,19 @@ const Hero = ({ scrollToRef }) => {
           variants={slideIn('right', 'tween', 0.2, 1)}
           className="relative w-full md:-mt-[20px] -mt-[12px] w-full"
         >
-          <div className='flex flex-col sm:flex-row justify-between place-items-center sm:place-items-start'>
+          <div className='flex flex-col sm:flex-row justify-between place-items-center sm:place-items-start gap-12'>
             <div className='flex flex-col gap-4 max-w-[650px]'>
-              <span className='text-white text-[26px] sm:text-[40px] '>
-                BNB Mining Contract
+              <span className='text-white text-[20px] sm:text-[40px] flex flex-row'>
+                <Image
+                  src='/bnb.png'
+                  alt="BNB - HERO"
+                  className='mr-4 moving-text'
+                  width={isMobile ? 34 : 65}
+                  height={isMobile ? 15 : 30}
+                />
+                <span>BNB Mining Contract</span>
               </span>
-              <span className='text-gray-500 text-[18px] sm:text-[25px] '>
+              <span className='text-gray-500 text-[18px] sm:text-[25px] mt-7'>
                 We have crafted an unique mining contract that will allow you to earn BNB while you sleep. No charts, no trading, no stress.
               </span>
               <span className='text-gray-500 text-[18px] sm:text-[25px] '>
@@ -43,11 +52,19 @@ const Hero = ({ scrollToRef }) => {
                     <span className="text-[14px] sm:text-[19px] text-white font-bungee p-1 mt-1">
                       Buy Miners
                     </span>
-                  </button>  </Link>
+                  </button>
+                </Link>
               </span>
             </div>
             <div>
-              <Image
+              <ReactPlayer
+                className='react-player fixed-bottom ml-15'
+                url='videos/trailer.mp4'
+                width='100%'
+                height='100%'
+                controls={true} />
+
+              {/* <Image
                 src="/cover.png"
                 alt="BEANMINE - HERO"
                 className=" object-cover rounded-[40px]  z-10 relative"
@@ -56,7 +73,7 @@ const Hero = ({ scrollToRef }) => {
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1400px) 50vw,
               100vw"
-              />
+              /> */}
             </div>
           </div>
         </motion.div>

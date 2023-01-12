@@ -111,7 +111,7 @@ const Navbar = () => {
         {isMobile
           ?
           <button onClick={() => (wallet ? disconnect(wallet) : connect())}
-            type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px] mt-2">
+            type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
             <img
               src="/wallet.svg"
               alt="wallet"
