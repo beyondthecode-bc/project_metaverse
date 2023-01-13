@@ -12,9 +12,9 @@ const MiningCard = () => {
     return (
         <motion.div
             variants={planetVariants("left")}
-            className="flex-[1] lg:max-w-[700px] flex justify-start flex-col gradient-05 sm:p-5 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] mr-5 relative"
+            className="flex-[1] lg:max-w-[700px] flex justify-start flex-col gradient-05 sm:p-5 p-4 rounded-lg border-[1px] border-[#6A6A6A] mr-5 relative"
         >
-            <div className="bg-neutral-900/30 rounded-[32px] p-6" id="buyMiners">
+            <div className="bg-neutral-900/30 rounded-lg p-6" id="buyMiners">
                 <div className="relative flex items-center">
                     <div className="flex-grow border-t border-gray-400"></div>
                     <span className="flex-shrink mx-4 sm:text-[30px] text-[24px] text-gray-400">Statistics</span>

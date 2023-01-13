@@ -3,7 +3,7 @@ import About from './About';
 import Explore from './Explore';
 import GetStarted from './GetStarted';
 import WhyUs from './WhyUs';
-import World from './World';
+import Referrer from './Referrer';
 import Insights from './Insights';
 import Feedback from './Feedback';
 
@@ -13,7 +13,7 @@ export {
   Explore,
   GetStarted,
   WhyUs,
-  World,
+  Referrer,
   Insights,
   Feedback,
 };
