@@ -1,12 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { socials } from '../constants';
-
-import styles from '../styles';
-import { footerVariants } from '../utils/motion';
 import { Link } from 'react-scroll'
 import { GiMining } from "react-icons/gi";
+import { motion } from 'framer-motion';
+import { socials } from '../constants';
+import { footerVariants } from '../utils/motion';
+import styles from '../styles';
 
 const Footer = () => (
   <motion.footer

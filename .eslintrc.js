@@ -59,6 +59,8 @@ module.exports = {
     "no-unused-vars": 0,
     "react/jsx-tag-spacing": 0,
     "no-trailing-spaces": 0,
+    "jsx-quotes": 0,
+    "react/jsx-boolean-value": 0,
     "operator-linebreak": 0,
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
