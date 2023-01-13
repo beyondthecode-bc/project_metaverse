@@ -44,7 +44,7 @@ export const newFeatures = [
     imgUrl: '/advantage-icon.svg',
     title: 'Big Advantage',
     subtitle:
-      'You don`t need to worry about a price chart as we are not bound to any. Compounding your rewards or buying more miners will give you a higher rate of return.',
+      `You don't need to worry about a price chart as we are not bound to any. Compounding your rewards or buying more miners will give you a higher rate of return.`,
 
   },
 ];

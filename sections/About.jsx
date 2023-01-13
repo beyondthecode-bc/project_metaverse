@@ -25,9 +25,9 @@ const About = () => (
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
         Are you looking to invest in a passive income opportunity that also allows you to be a part of the exciting World of Cryptocurrency? <span className="font-extrabold text-white">Look no further!</span><br /><br />
-        Our new project allows investors to buy miners that mine and earn either  <span className="font-extrabold text-white">ETH</span> on the Ethereum Blockchain or
-        <span className="font-extrabold text-white"> BNB</span> on the Binance Smart Chain.<br />
-        Our state-of-the-art Web3 Technology makes it easy for investors to get started and start earning passive income.
+        Our new project allows investors to buy miners that mine <span className="font-extrabold text-white"> BNB</span> on the Binance Smart Chain.<br />
+        Our state-of-the-art Web3 Technology makes it easy for investors to get started and start earning passive income.<br /><br />
+        Continue reading to learn more about our project and how you can get started today!
       </motion.p>
 
       <motion.img
@@ -36,7 +36,7 @@ const About = () => (
         alt="arrow down"
         className="w-[18px] h-[28px] object-contain mt-[28px]"
       />
-    </motion.div>
+    </motion.div><br />
   </section>
 );
 

@@ -12,9 +12,9 @@ const MiningCard = () => {
     return (
         <motion.div
             variants={planetVariants("left")}
-            className="flex-[1] lg:max-w-[700px] flex justify-start flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] mr-5 relative"
+            className="flex-[1] lg:max-w-[700px] flex justify-start flex-col gradient-05 sm:p-5 p-4 rounded-[32px] border-[1px] border-[#6A6A6A] mr-5 relative"
         >
-            <div className="bg-neutral-900/30 rounded-lg p-10" id="buyMiners">
+            <div className="bg-neutral-900/30 rounded-[32px] p-6" id="buyMiners">
                 <div className="relative flex items-center">
                     <div className="flex-grow border-t border-gray-400"></div>
                     <span className="flex-shrink mx-4 sm:text-[30px] text-[24px] text-gray-400">Statistics</span>
@@ -97,13 +97,13 @@ const MiningCard = () => {
                 <div className="flex flex-col sm:flex-row mt-4 gap-4">
                     <button type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
                         <BiGitMerge color="#333333" size={26} />
-                        <span className="text-[19px] font-bold text-[#A9D0F5]" style={{ color: "#333333" }}>
+                        <span className="text-[17px] font-bold text-[#A9D0F5]" style={{ color: "#333333" }}>
                             Compound Miners
                         </span>
                     </button>
                     <button type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
                         <FaHandHoldingUsd color="white" size={26} style={{ color: "#333333" }} />
-                        <span className=" text-[19px]  font-bold	" style={{ color: "#333333" }}>
+                        <span className=" text-[17px]  font-bold	" style={{ color: "#333333" }}>
                             Collect Rewards
                         </span>
                     </button>
