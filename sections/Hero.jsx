@@ -14,6 +14,8 @@ const Hero = ({ scrollToRef }) => {
 
   return (
     <section className={`${styles.yPaddings} sm:pl-16 pl-5 sm:pr-16 pr-5`}>
+          <div className="gradient-03 z-0" />
+
       <motion.div
         variants={staggerContainer}
         initial="hidden"
