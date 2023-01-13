@@ -73,9 +73,9 @@ const Navbar = () => {
                   <img
                     src="/wallet.svg"
                     alt="wallet"
-                    className="w-[14px] h-[14px] object-contain"
+                    className="w-[20px] h-[30px] object-contain"
                   />
-                  <span className="text-[10px] sm:text-[14px] text-white font-bungee mt-1">
+                  <span className="text-[16px] sm:text-[24px] text-white font-bungee mt-1">
                     {isConnected ? ensName ?? truncatedAddress : "Connect Wallet"}
                   </span>
                 </button>

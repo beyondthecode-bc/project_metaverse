@@ -12,8 +12,6 @@ import ReactPlayer from 'react-player'
 const Hero = ({ scrollToRef }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
 
-  console.log(isMobile)
-
   return (
     <section className={`${styles.yPaddings} sm:pl-16 pl-5 sm:pr-16 pr-5`}>
       <motion.div
@@ -41,8 +39,8 @@ const Hero = ({ scrollToRef }) => {
                 />
                 <span>BNB Mining Contract</span>
               </span>
-              <span className='text-gray-500 text-[18px] sm:text-[25px] mt-7'>
-                We have crafted an unique mining contract that will allow you to earn BNB while you sleep. No charts, no trading, no stress.
+              <span className='text-gray-400 text-[18px] sm:text-[25px] mt-7'>
+                We have crafted an unique mining contract that will allow you to earn BNB while you sleep.  <span className="font-extrabold text-white">No charts, no trading, no stress.</span>
               </span>
               <span className='text-gray-500 text-[18px] sm:text-[25px] '>
                 <Link to="buyMiners" smooth={true}>
@@ -57,13 +55,22 @@ const Hero = ({ scrollToRef }) => {
               </span>
             </div>
             <div>
-              <ReactPlayer
-                className='react-player fixed-bottom ml-15'
-                url='videos/trailer.mp4'
-                width='100%'
-                height='100%'
-                loop
-                controls={true} />
+              <div style={{
+                backgroundImage: "url(/img/planet-01.png)",
+                backgroundSize: "cover",
+                width: '100%',
+                height: '100%'
+
+              }}>
+                <ReactPlayer
+                  className='react-player fixed-bottom ml-15'
+                  url='videos/trailer.mp4'
+                  width='100%'
+                  height='100%'
+
+                  loop
+                  controls={true} />
+              </div>
 
               {/* <Image
                 src="/cover.png"
