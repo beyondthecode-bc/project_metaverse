@@ -23,7 +23,7 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative`}
+      className={`${styles.xPaddings} py-8 relative mb-14`}
     >
       <div className="absolute w-[50%] inset-0" />
       <div
@@ -44,10 +44,10 @@ const Navbar = () => {
           ?
 
           <ConnectKitButton.Custom >
-            {({ isConnected, show, truncatedAddress, ensName }) => {
+            {({ isConnected, isConnecting, show, truncatedAddress, ensName }) => {
               return (
                 <button
-                  type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]"
+                  type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px] mt-2"
                   onClick={show}
                 >
                   <img
@@ -55,8 +55,8 @@ const Navbar = () => {
                     alt="wallet"
                     className="w-[14px] h-[14px] object-contain"
                   />
-                  <span className="text-[10px] sm:text-[14px] text-white font-bungee mt-1">
-                    {isConnected ? ensName ?? truncatedAddress : "Connect Wallet"}
+                  <span className="text-[12px] text-white font-bungee mt-0.5">
+                    {isConnecting ? "Connecting..." : isConnected ? ensName ?? truncatedAddress : "Connect Wallet"}
                   </span>
                 </button>
               );
@@ -64,10 +64,10 @@ const Navbar = () => {
           </ConnectKitButton.Custom>
           :
           <ConnectKitButton.Custom >
-            {({ isConnected, show, truncatedAddress, ensName }) => {
+            {({ isConnected, isConnecting, show, truncatedAddress, ensName }) => {
               return (
                 <button
-                  type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]"
+                  type="button" className="flex rock-button items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px] mt-4"
                   onClick={show}
                 >
                   <img
@@ -75,8 +75,8 @@ const Navbar = () => {
                     alt="wallet"
                     className="w-[20px] h-[30px] object-contain"
                   />
-                  <span className="text-[16px] sm:text-[24px] text-white font-bungee mt-1">
-                    {isConnected ? ensName ?? truncatedAddress : "Connect Wallet"}
+                  <span className="text-[19px] text-white font-bungee mt-1">
+                    {isConnecting ? "Connecting..." : isConnected ? ensName ?? truncatedAddress : "Connect Wallet"}
                   </span>
                 </button>
               );

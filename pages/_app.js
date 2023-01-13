@@ -52,7 +52,7 @@ const client = createClient(
 const MyApp = ({ Component, pageProps }) => {
   return (
     <WagmiConfig client={client}>
-      <ConnectKitProvider theme="rounded">
+      <ConnectKitProvider theme="midnight">
         <Meta title="BEANMINE.app | Mine your BNB, TODAY!" />
         <Component {...pageProps} />
       </ConnectKitProvider>
