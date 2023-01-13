@@ -57,6 +57,7 @@ module.exports = {
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
     "no-unused-vars": 0,
+    "react/jsx-tag-spacing": 0,
     "no-trailing-spaces": 0,
     "operator-linebreak": 0,
     'react/react-in-jsx-scope': 'off',
