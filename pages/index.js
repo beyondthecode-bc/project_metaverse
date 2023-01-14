@@ -17,7 +17,8 @@ const Home = () => {
       </div>
       <Referrer />
       <div className="relative">
-        <div className="gradient-04 z-0" />
+      <Insights />
+              <div className="gradient-04 z-0" />
         <Feedback />
       </div>
       <Footer />

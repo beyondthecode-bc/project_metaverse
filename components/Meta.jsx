@@ -14,7 +14,7 @@ const Meta = ({ title, keyword, desc }) => {
                 <meta name="theme-color" content="#ffffff" />
                 <meta name="description" content={desc} />
                 <meta name="keyword" content={keyword} />
-                <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
 
             </Head>
         </div>
