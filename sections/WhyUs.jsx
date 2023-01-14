@@ -32,11 +32,11 @@ const WhyUs = () => (
         variants={planetVariants('right')}
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
-          src="/notranp.png"
-          alt="get-started"
-          className="w-[90%] h-[90%] object-contain"
-        />
+      <img
+            src="/notranp.png"
+            alt="planet-09"
+            className="moving-image mt-20 ml-10 w-full lg:h-[490px] h-auto min-h-[210px] object-cover rounded-[40px]"
+          />
       </motion.div>
     </motion.div>
   </section>
