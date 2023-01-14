@@ -12,13 +12,12 @@ const Home = () => {
       </div>
       <div className="relative">
         <GetStarted />
-        <div className="gradient-04 z-0" />
+        <div className="gradient-03 z-0" />
         <WhyUs />
       </div>
       <Referrer />
       <div className="relative">
-      <Insights />
-              <div className="gradient-04 z-0" />
+        <div className="gradient-03 z-0" />
         <Feedback />
       </div>
       <Footer />

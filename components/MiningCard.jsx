@@ -87,22 +87,22 @@ const MiningCard = () => {
                 </div>
                 <span className="sm:text-[18px] text-[14px] sm:leading-[40.32px] leading-[36.32px] font-bold text-white mt-4">ENTER BNB AMOUNT & CLICK BUY MINERS BELOW</span>
                 <div>
-                    <button type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#25618B] rounded-lg gap-[12px] w-full">
-                        <GiMiner color="white" size={26} />
+                    <button type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#bfac1a] rounded-lg gap-[12px] w-full">
+                        <GiMiner color="white" size={30} />
                         <span className="font-normal text-[19px] text-white font-bold	">
                             Buy Miners
                         </span>
                     </button>
                 </div>
                 <div className="flex flex-col sm:flex-row mt-4 gap-4">
-                    <button type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
-                        <BiGitMerge color="#333333" size={26} />
+                    <button type="button" className="flex items-center icon-control place-content-center h-fit py-4 px-6 bg-[#ffe89e] rounded-lg  gap-[12px] w-full">
+                        <BiGitMerge color="#333333" size={30} />
                         <span className="text-[17px] font-bold text-[#A9D0F5]" style={{ color: "#333333" }}>
                             Compound Miners
                         </span>
                     </button>
-                    <button type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#A9D0F5] rounded-lg  gap-[12px] w-full">
-                        <FaHandHoldingUsd color="white" size={26} style={{ color: "#333333" }} />
+                    <button type="button" className="flex items-center icon-control place-content-center	 h-fit py-4 px-6 bg-[#ffe89e] rounded-lg  gap-[12px] w-full">
+                        <FaHandHoldingUsd color="white" size={30} style={{ color: "#333333" }} />
                         <span className=" text-[17px]  font-bold	" style={{ color: "#333333" }}>
                             Collect Rewards
                         </span>

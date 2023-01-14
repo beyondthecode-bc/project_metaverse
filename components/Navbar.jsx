@@ -74,7 +74,7 @@ const Navbar = () => {
                     alt="wallet"
                     className="w-[20px] h-[30px] object-contain"
                   />
-                  <span className="text-[19px] text-white font-bungee mt-1">
+                  <span className="text-[17px] text-white font-bungee mt-0.5">
                     {isConnecting ? "Connecting..." : isConnected ? ensName ?? truncatedAddress : "Connect Wallet"}
                   </span>
                 </button>
