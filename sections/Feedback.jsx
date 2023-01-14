@@ -38,9 +38,9 @@ const Feedback = () => {
           </h4>
           <div >
             <iframe
-              width="400"
+              width={isMobile ? 300 : 400}
               height="690"
-              frameborder="0"
+              frameBorder="0"
               allow="clipboard-read *; clipboard-write *; web-share *; accelerometer *; autoplay *; camera *; gyroscope *; payment *; geolocation *"
               src="https://flooz.trade/embed/trade?swapDisabled=true&swapLockToToken=false&onRampDisabled=false&onRampAsDefault=false&onRampDefaultAmount=200&network=bsc&lightMode=false&primaryColor=%23d2cd32&roundedCorners=0&padding=20&refId=gWfwZe"
             ></iframe>

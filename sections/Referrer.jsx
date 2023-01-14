@@ -42,7 +42,7 @@ const World = () => {
           className="flex-[1] w-full flex justify-start flex-col gradient-05 sm:p-5 p-4 rounded-lg border-[1px] border-[#6A6A6A] relative mt-5"
         >
 
-          <div className="invest-input-holder flex items-center  justify-between ">
+          <div className="invest-input-holder flex items-center  justify-between flex-col sm:flex-row ">
             <div className='text-white text-[24px]'>
               YOUR LINK:
             </div>
