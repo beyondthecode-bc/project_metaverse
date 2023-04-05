@@ -241,3 +241,15 @@ input[type=number]::-webkit-inner-spin-button {
     transform: translateY(0);
   }
 }
+
+.p-hero__video-pattern-1 {
+  top: -31%;
+  right: -14%;
+  width: 53%;
+}
+.p-hero__video-pattern-1, .p-hero__video-pattern-2 {
+  pointer-events: none;
+  position: absolute;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}

@@ -14,7 +14,7 @@ const Hero = ({ scrollToRef }) => {
 
   return (
     <section className={`${styles.yPaddings} sm:pl-16 pl-5 sm:pr-16 pr-5`}>
-          <div className="gradient-03 z-0" />
+      <div className="gradient-03 z-0" />
 
       <motion.div
         variants={staggerContainer}
@@ -56,8 +56,13 @@ const Hero = ({ scrollToRef }) => {
               </span>
             </div>
             <div>
+              <picture className="p-hero__video-pattern-1">
+                <source data-srcset="https://www.blockapescissors.com/wp-content/themes/bas/assets/images/misc/pattern-leafs-1.webp" type="image/webp" srcset="https://www.blockapescissors.com/wp-content/themes/bas/assets/images/misc/pattern-leafs-1.webp" />
+                <source data-srcset="https://www.blockapescissors.com/wp-content/themes/bas/assets/images/misc/pattern-leafs-1.png" type="image/png" srcset="https://www.blockapescissors.com/wp-content/themes/bas/assets/images/misc/pattern-leafs-1.png" />
+                <img src="https://www.blockapescissors.com/wp-content/themes/bas/assets/images/misc/pattern-leafs-1.png" data-src="https://www.blockapescissors.com/wp-content/themes/bas/assets/images/misc/pattern-leafs-1.png" width="756" height="641" alt="" class=" ls-is-cached lazyloaded" />
+              </picture>
               <ReactPlayer
-                className='react-player fixed-bottom ml-15'
+                className='react-player fixed-bottom ml-15 rounded-[40px]'
                 url='videos/trailer.mp4'
                 width='100%'
                 height='100%'
